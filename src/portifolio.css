@@ -339,6 +339,10 @@ main .header h1{
     padding: 0;
 }
 
+#projects section h1 {
+    width: 228px;
+}
+
 #projects section ol {
     padding: 0;
     margin: 0;
@@ -998,7 +1002,6 @@ li.card.wordmark-card.visible-down {
 
     #projects .section-projects ol div {
         gap: 0.5em;
-        align-items: center;
     }
 
     #projects .section-projects ol {
