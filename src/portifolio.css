@@ -9,7 +9,7 @@
     --laranja: #FF7829;
     --branco-alaranjado: #FAF1E3;
 
-    --diretoriaTI: #9A92FF;
+    --DTI: #9A92FF;
     --garçom: #F65C5C;
     --iformandos: #52AF57;
     --celebralize: #7ECADB;
@@ -186,16 +186,19 @@ ol{
 /*       Projetos        */
 
 
+#projects header{
+    padding-top: 1.3em;
+}
+
 main .header{
     z-index: 10;
     width: 100%;
-    padding: 1em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--laranja);
-    padding-top: 1.3em;
     padding: var(--padding-lateral);
+    
     margin: 0;
     height: fit-content;
     max-width: 100vw;
@@ -204,6 +207,7 @@ main .header{
 }
 
 main .header nav {
+    padding-top: 1.3em !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -256,7 +260,6 @@ main .header h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
     width: 100%;
     margin: 0;
@@ -279,7 +282,6 @@ main .header h1{
 #projects .section-projects ol{
     display: flex;
     gap: 6em;
-    flex-wrap: wrap;
     align-items: center;
     padding: 0;
     margin: 0;
@@ -310,7 +312,8 @@ main .header h1{
     margin: 0;
     height: fit-content;
     max-width: 100vw;
-    box-sizing: border-box
+    background-color: #181818;
+    padding-bottom: 9em;
 }
 
 #projects section .description{
@@ -359,7 +362,7 @@ main .header h1{
     filter: brightness(0.8);
 }
 
-#projects #diretoriaTI h1{
+#projects #DTI h1{
     font-size: 60px;
 }
 
@@ -367,21 +370,21 @@ main .header h1{
     font-weight: 500;
     font-size: 30px;
 }
-#projects #diretoriaTI h1 {
-    color: var(--diretoriaTI);
+#projects #DTI h1 {
+    color: var(--DTI);
 }
 
-#projects #diretoriaTI h2 {
-    color: var(--diretoriaTI);
+#projects #DTI h2 {
+    color: var(--DTI);
 }
-#projects #diretoriaTI header .projects-links a:nth-child(1) {
-    color: var(--diretoriaTI);
+#projects #DTI header .projects-links a:nth-child(1) {
+    color: var(--DTI);
     background: #ffffff;
 }
 
-#projects #diretoriaTI header .projects-links a:nth-child(2){
+#projects #DTI header .projects-links a:nth-child(2){
     color: #ffffff;
-    background: var(--diretoriaTI);
+    background: var(--DTI);
 }
 
 #projects section .description li div {
@@ -397,20 +400,22 @@ main .header h1{
 }
 
 #projects section{
-    background-color: #181818;
     padding:var(--padding-lateral);
     padding-top: 7em;
     box-sizing: border-box;
     max-width: 100vw;
 }
 
-#projects section p, #projects section li{
+#projects section p, #projects section li {
     color: var(--cinza-muito-claro);
     font-size: 20px;
+    display: flex;
+    align-items: center;
 
+    box-sizing: border-box;
 }
 
-#projects #diretoriaTI{
+#projects #DTI{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -585,6 +590,8 @@ main .header h1{
     flex-direction: column;
     gap: 1em;
     width: 30%;
+    min-width: 250px;
+    box-sizing: border-box;
 }
 
 #about-me section .about-container #card-me{
@@ -661,52 +668,185 @@ main .header h1{
     background-color: transparent;
 }
 
+.branding-design .projetos ol{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(180px, auto));
+    grid-template-areas:
+        "a b b b"
+        "c c d d"
+        "e e f f";
+    gap: 1.2em;
+    width: 100%;
+}
+
+.branding-design .projetos .card{
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.2em;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.08) inset;
+}
+
+/* áreas do grid 4x3 */
+.branding-design .projetos .logo-card{ grid-area: a; }
+.branding-design .projetos .wordmark-card{ grid-area: b; }
+.branding-design .projetos .swatches-card{ grid-area: c; }
+.branding-design .projetos .poster-card{ grid-area: d; }
+.branding-design .projetos .pattern-card{ grid-area: e; }
+.branding-design .projetos .empty-card{ grid-area: f; }
+
+/* Logo card */
+.branding-design .projetos .logo-card{
+    display: grid;
+    place-items: center;
+}
+
+.branding-design .projetos .logo-card .logo-mark{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--DTI);
+    border: 8px solid rgba(154,146,255,0.35);
+}
+
+.branding-design .projetos .logo-card .logo-mark span{
+    font-family: 'Oregano', cursive;
+    font-size: 64px;
+    color: #fff;
+}
+
+/* Wordmark card */
+.branding-design .projetos .wordmark-card .wordmark{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.branding-design .projetos .wordmark-card h2{
+    font-weight: 600;
+    font-size: 46px;
+    color: var(--DTI);
+    margin: 0;
+}
+
+/* Swatches */
+.branding-design .projetos .swatches-card .swatches{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.branding-design .projetos .swatches-card .swatches li{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 12px 14px;
+    color: #222;
+    font-weight: 600;
+}
+
+.branding-design .projetos .swatches-card .swatches li span{
+    width: 140px;
+    height: 42px;
+    border-radius: 8px;
+    background: var(--swatch, #ccc);
+    border: 2px solid rgba(0,0,0,0.08);
+}
+
+/* Poster */
+.branding-design .projetos .poster-card .poster{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.branding-design .projetos .poster-card .title-1{
+    font-size: 52px;
+    color: var(--DTI);
+    margin: 0;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.branding-design .projetos .poster-card .title-2{
+    font-size: 58px;
+    margin: 0.1em 0 0.2em;
+    line-height: 1;
+    color: #0C0728;
+    font-weight: 800;
+}
+
+.branding-design .projetos .poster-card .subtitle{
+    color: #777;
+    margin: 0;
+}
+
+li.card.wordmark-card.visible-down {
+    min-height: 300px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 1000px){
+    .branding-design .projetos ol{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: none;
+    }
+}
+
 
  
 
 
 /*   responsividade    */
 
+
 @media screen and (max-width: 1200px) {
     :root {
-        --padding-lateral: 0 3em;
-    }
-
-        /* home */
-
-    #home .section-about #kill-svg {
-        display: none;
-    }
-
-    #home .section-about .container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 70px;
-        max-height: none;
-    }
-    
-    #home .section-about {
-        align-items: center;
-    }
-
-    #about-me h2 Specificity{
-        font-size: 40px;
+            --padding-lateral: 0 3em;
         }
-
-
-    /* projetos */
+    
+        #about-me section .about-container {
+            flex-direction: column;
+        }
+    
+        #about-me section .about-container>li {
+            width: 100%;
+        }
+    
+        /* home */
+    
+        #home .section-about #kill-svg {
+            display: none;
+        }
+    
+        #home .section-about .container {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 70px;
+            max-height: none;
+        }
+    
+        #home .section-about {
+            align-items: center;
+        }
+    
+    
+        /* projetos */
         #projects .section-projects ol div li a {
             font-size: 60px;
         }
-}
-
-
-
-
-
-@media screen and (max-width: 1000px) {
     a {
         font-size: 37px !important;
     }
@@ -745,9 +885,6 @@ main .header h1{
         display: none;
     }
 
-    #about-me section .about-container>li {
-        width: 47%;
-    }
 
     #about-me section .about-container .technical-skills ol li img{
         width: 100px;
@@ -792,13 +929,15 @@ main .header h1{
 
     .header.has-menu nav.is-open {
         display: flex;
+        margin: var(--padding-lateral)
+
     }
 
-    .header.has-menu nav a {
-        color: var(--cinza) !important;
-        border: none;
-        font-size: 22px !important;
-    }
+        .header.has-menu nav a{
+            color: var(--cinza) !important;
+            border: none;
+        }
+
 
     .header.has-menu nav a:hover {
         border: none;
@@ -808,4 +947,95 @@ main .header h1{
     #projects .header.has-menu .menu-toggle{
         background-color: white;
     }
+}
+
+@media screen and (max-width: 728px){
+    :root {
+            --padding-lateral: 0 1em;
+        }
+        #about-me section #card-me-mobile{
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        #projects .section-projects{
+            align-content: start;
+
+        }
+
+        #projects .section-projects ol{
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        #projects .section-projects ol div li a {
+            font-size: 30px !important;
+        }
+
+        #projects .section-projects ol div {
+            gap: 0.5em;
+        }
+
+        #projects section header .projects-links a {
+            padding: 7px 18px;
+            border-radius: 90px;
+            text-decoration: none;
+            transition: filter 0.2s ease;
+            font-size: 25px !important;
+        }
+
+
+}
+
+@media screen and (max-width: 387px) {
+
+    p,li {
+        font-size: 21px !important;
+        line-height: normal !important;
+    }
+
+    #projects .section-projects ol div {
+        gap: 0.5em;
+        align-items: center;
+    }
+
+    #projects .section-projects ol {
+        gap: .5em;
+    }
+
+    #about-me section h2 {
+        font-size: 35px;
+    }
+
+    #about-me section #card-me-mobile div p {
+        font-size: 19px !important;
+    }
+
+    #about-me section h3 {
+        font-size: 22px;
+    }
+
+    #about-me section .about-container .technical-skills ol li img {
+        width: 60px;
+    }
+
+    #about-me section .about-container .technical-skills ol {
+        gap: 0.5em;
+    }
+}
+
+/* os botoes tinham que bugar ne*/
+@media screen and (max-width: 800px){
+    #projects section header{
+        flex-wrap: wrap;
+    }
+    
+
+    #projects section header .projects-links a{
+        padding: 7px 18px;
+        font-size: 25px !important;
+    }
+
 }
