@@ -392,6 +392,10 @@ main .header h1{
 
 #projects #DTI header .projects-links a:nth-child(2){
     color: #ffffff;
+    background: #FFC63B;
+}
+#projects #DTI header .projects-links a:nth-child(3) {
+    color: #ffffff;
     background: var(--DTI);
 }
 
@@ -476,9 +480,13 @@ main .header h1{
 
 #projects #garçom header .projects-links a:nth-child(2) {
     color: #ffffff;
-    background: var(--garçom);
+    background: #FFC300;
 }
 
+#projects #garçom header .projects-links a:nth-child(3) {
+    color: #ffffff;
+    background: var(--garçom);
+}
 
 
 #projects #iformandos h1 {
@@ -502,10 +510,13 @@ main .header h1{
 
 #projects #iformandos header .projects-links a:nth-child(2) {
     color: #ffffff;
-    background: var(--iformandos);
+    background: #CD191E;
 }
 
-
+#projects #iformandos header .projects-links a:nth-child(3) {
+    color: #ffffff;
+    background: var(--iformandos);
+}
 
 #projects #iformandos .layout figure{
     flex-direction: row;
@@ -543,9 +554,13 @@ main .header h1{
 
 #projects #celebralize header .projects-links a:nth-child(2) {
     color: #ffffff;
+    background: #69B2A0;
+}
+
+
+#projects #celebralize header .projects-links a:nth-child(3) {
+    color: #ffffff;
     background: var(--celebralize);
-    filter: brightness(0.8);
-    cursor: not-allowed;
 }
 
 /*       About-me        */
